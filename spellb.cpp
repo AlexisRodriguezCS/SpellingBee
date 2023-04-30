@@ -13,37 +13,37 @@ using std::cin;
 using std::string;
 
 void getNewDictionary(SBTrie *sbt, string filename){
-  // enter needed code here for command 1
+  // Command 1
   sbt->setNewDictionary(filename);
 }
 
 void updateDictionary(SBTrie *sbt, string filename){
-  // enter needed code here for command 2
+  // Command 2
   sbt->addToDictionary(filename);
 }
 
 void setupLetters(SBTrie *sbt, string letters){
-  // enter needed code here for command 3
+  // Command 3
   sbt->setLetters(letters);
 }
 
 void showLetters(SBTrie *sbt){
-  // enter needed code here for command 4
+  // Command 4
   sbt->getLetters();
 }
 
 void attemptWord(SBTrie *sbt, string letters){
-  // enter needed code here for command 5
+  // Command 5
   sbt->tryWord(letters);
 }
 
 void showFoundWords(SBTrie *sbt){
-  // enter needed code here for command 6
+  // Command 6
   sbt->getFoundWords();
 }
 
 void showAllWords(SBTrie *sbt){
-  // enter needed code here for command 7
+  // Command 7
   sbt->getAllWords();
 }
 
@@ -87,18 +87,14 @@ int main(int argc, char** argv){
     // get command character
     char command;
     ss >> command;
-    //cout << "Debug command:" << command << "***\n";
     
     if(command == '1'){
         ss >> input;
-        //cout << std::setw(17) << input << " " << std::right << std::setw(2) << input.length() << std::left << endl;
-        //cout << "Debug 1:" << input << "***\n";
         getNewDictionary(sbt, input);
     }
 
     if(command == '2'){
         ss >> input;
-        //cout << "Debug 2:" << input << "***\n";
         updateDictionary(sbt, input);
     }
         
@@ -114,7 +110,6 @@ int main(int argc, char** argv){
 
     if(command == '5'){
         ss >> input;
-        //cout << "Debug 5:" << input << "***\n";
         attemptWord(sbt, input);
     }
 
